@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NpcChatUI
   dialogue: {fileID: 1902058261}
+  npc: {fileID: 0}
   npcDisplayName: Ian
 --- !u!1 &480448324
 GameObject:
@@ -518,6 +519,7 @@ MonoBehaviour:
   model: recursive/flint-v1.0:free
   maxTokens: 1000
   temperature: 0.7
+  timeoutSeconds: 30
 --- !u!4 &480448326
 Transform:
   m_ObjectHideFlags: 0
@@ -991,15 +993,18 @@ MonoBehaviour:
   - {fileID: 219416984}
   - {fileID: 1631395304}
   dialogue: {fileID: 1902058261}
+  missionPoint: {fileID: 0}
   moveSpeed: 3
   rotationSpeed: 8
-  gravity: -9.81
   waypointTolerance: 0.2
   waitTimeAtPoint: 1.5
   chaseRadius: 6
   stopChaseRadius: 9
   talkRadius: 1.8
   conversationCooldown: 15
+  alertSeconds: 10
+  guideWaitDistance: 7
+  missionArriveDistance: 2
 --- !u!143 &1902058256
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1133,12 +1138,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NpcDialogue
   client: {fileID: 480448325}
+  npc: {fileID: 0}
   npcName: Ian, guarda do porto
-  persona: "Voce e Ian, guarda do porto de Vharos, um RPG de fantasia.\nPersonalidade:
-    desconfiado, seco, leal a guilda dos mercadores.\nSabe: rotas de navios, horarios
-    das mar\xE9s, rumores de piratas.\nNao sabe: segredos do rei, nomes de tecnicas
-    ou mecanicas do jogo."
+  useRules: 1
   maxWords: 40
+  maxHistoryMessages: 8
+  maxHistoryChars: 2400
   offlineLines:
   - Nao tenho tempo para conversa agora.
   - Volte quando o porto estiver mais calmo.
