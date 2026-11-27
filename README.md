@@ -2,7 +2,7 @@
 
 
 
-**Integrantes:** Lais Domingos de Sousa Lima · _Nome 2_
+**Integrante:** Lais Domingos de Sousa Lima 
 
 **Disciplina:** Programação da Inteligência Artificial
 
